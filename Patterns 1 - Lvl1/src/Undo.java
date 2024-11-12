@@ -22,10 +22,10 @@ public class Undo {
         System.out.println("The command has been added successfully");
     }
 
-    public void removeLastCommand(String command){
+    public void removeLastCommand(){
         if (!commands.isEmpty()){
             commands.remove(commands.size()-1);
-            System.out.println("The last command: " + command + ", has been successfully deleted");
+            System.out.println("The last command has been successfully deleted");
         }else {
             System.out.println("The command couldn't been deleted");
         }
@@ -34,11 +34,10 @@ public class Undo {
     public void listCommand(){
         if (!commands.isEmpty()){
             for (String s : commands) {
-                System.out.println(s);
+                System.out.println("- " + s);
             }
         }else {
-            System.out.println("The command list couldn't been deleted");
+            System.out.println("The command list couldn't be showed");
         }
     }
-
 }
